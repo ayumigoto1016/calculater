@@ -1,34 +1,42 @@
 const num1 = document.getElementById('num1');
 const num2 = document.getElementById('num2');
+const btnadd = document.getElementById('btn-add');
+const btnsub = document.getElementById('btn-sub');
+const btnmul = document.getElementById('btn-mul');
+const btndiv = document.getElementById('btn-div');
+const box = document.getElementById('box');
 
 const getNum1 = () => {
-  
+  const number1 = Number.parseFloat(num1.value);
+  return number1;
+
 }
 
 const getNum2 = () => {
-  
+  const number2 = Number.parseFloat(num2.value);
+  return number2;
 }
 
-const getNum3 = () => {
-  
+const showResult = (num) => {
+  box.textContent = num;
 }
 
-('#btn-add').addEventListener('click', ()=>{
+btnadd.addEventListener('click', ()=>{
   const result = getNum1() + getNum2();
   showResult(result);
 });
 
-('#btn-sub').addEventListener('click', ()=>{
+btnsub.addEventListener('click', ()=>{
   const result = getNum1() - getNum2();
   showResult(result);
 });
 
-('#btn-mul').addEventListener('click', ()=>{
+btnmul.addEventListener('click', ()=>{
   const result = getNum1() * getNum2();
   showResult(result);
 });
 
-('#btn-div').addEventListener('click', ()=>{
+btndiv.addEventListener('click', ()=>{
   const result = getNum1() / getNum2();
   showResult(result);
 });
